@@ -3,9 +3,13 @@
 # ~~~~
 
 # Ask for user name
-GET     /                           controllers.ChatController.index
+GET         /                    controllers.ChatController.index
+
+# Post users
+POST        /userPost            controllers.ChatController.userPost
+
 # Start chat
-GET     /chat/:name                 controllers.ChatController.openChat(name)
+GET         /chat/:name          controllers.ChatController.openChat(name)
 
 # Map static resources from the /public folder to the /assets URL path
-GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
+GET         /assets/*file        controllers.Assets.versioned(path="/public", file: Asset)
