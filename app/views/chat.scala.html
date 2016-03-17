@@ -64,6 +64,7 @@
             function send(){
                 var name = document.getElementById("message").value;
                 var json = '{"message" : "' + name   +   '"}';
+                writeResponse(json);
                 webSocket.send(json);
             }
 
