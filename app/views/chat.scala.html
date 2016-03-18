@@ -1,4 +1,4 @@
-@(name: String)(implicit request: play.api.mvc.RequestHeader, flash: Flash)
+@(name: String, uri : String)(implicit request: play.api.mvc.RequestHeader, flash: Flash)
 <!DOCTYPE html>
 <html>
     <head>
@@ -34,7 +34,8 @@
                     return;
                 }
                 // Create a new instance of the websocket
-                webSocket = new WebSocket("wss://codingtest.meedoc.com/ws?username=@name");
+
+                webSocket = new WebSocket("@uri?username=@name");
 
                 /**
                  * Binds functions to the listeners for the websocket.

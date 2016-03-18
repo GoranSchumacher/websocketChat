@@ -14,6 +14,8 @@ import play.api.i18n.MessagesApi
  */
 class ChatController @Inject()(val messagesApi: MessagesApi) extends Controller with I18nSupport {
 
+  val CHAT_URI = "meedoc.webchat.uri"
+
   val userForm = Form(
     mapping(
       "name" -> text
@@ -31,7 +33,8 @@ class ChatController @Inject()(val messagesApi: MessagesApi) extends Controller 
   }
 
   def openChat(name : String) = Action { implicit request =>
-    Ok(views.html.chat(name))
+    val uri = play.Configuration.root().getString(CHAT_URI)
+    Ok(views.html.chat(name, uri))
   }
 
 }
