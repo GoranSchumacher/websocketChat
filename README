@@ -1,10 +1,19 @@
 This is your new Play application
 =================================
 
-This file will be packaged with your application when using `activator dist`.
+This is an ordinary Play app.
+Start by running activator run or activator start
 
-There are several demonstration files available in this template.
+It can also be started from within your IDE with Play support,
+for instance IntelliJ with Play and Scala plugin installed.
+
+I could have built this code on top of the Activator example Clustered-chat
+but I thibk that would have been over kill for this simple example.
+Clustered-chat uses actors, coffee script and twitter bootstrap html rendering.
 
 Controllers
 ===========
 
+Simply call http://localhost:9000 and you will be presented with a screen where you can enter your chat name.
+
+Submit and start chatting at the chat page.

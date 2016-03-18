@@ -1,4 +1,4 @@
-package models
+package forms
 
 /**
  * @author Gøran Schumacher (GS) / Schumacher Consulting Aps
